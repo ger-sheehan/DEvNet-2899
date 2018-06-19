@@ -1,0 +1,133 @@
+{
+  "parsers":[
+    {
+      "encodingpath":"XYZ",
+      "function" :
+      {
+        "name" : "processGeneric",
+        "index": {
+          "index_prefix" : "newtelemetryabc",
+          "index_type" : "daily"
+        }
+      }
+    },
+    {
+      "encodingpath":"sys-intf",
+      "function" :
+      {
+        "name" : "processGeneric",
+        "index": {
+          "index_prefix" : "intf_",
+          "index_type" : "daily"
+        },
+        "members": [
+          {"gpb_name": "dn", "gpb_type": "string", "db_name": "dn", "db_type": "string"},
+          {"gpb_name": "operSt", "gpb_type": "string", "db_name": "operSt", "db_type": "string"},
+          {"gpb_name": "operStQual", "gpb_type": "string", "db_name": "operStQual", "db_type": "string"},
+          {"gpb_name": "status", "gpb_type": "string", "db_name": "status", "db_type": "string"},
+          {"gpb_name": "Timestamp", "gpb_type": "long", "db_name": "timestamp", "db_type": "string"},
+          {"gpb_name": "node_id", "gpb_type": "string", "db_name": "swname", "db_type": "string"}
+        ]
+      }
+    },
+    {
+      "encodingpath":"show processes cpu",
+      "function" :
+      {
+        "name" : "processGeneric",
+        "index": {
+          "index_prefix" : "lan_cpu_stats_",
+          "index_type" : "daily"
+        },
+        "members": [
+          {"gpb_name": "process", "gpb_type": "string", "db_name": "pname", "db_type": "string"},
+          {"gpb_name": "onesec", "gpb_type": "string", "db_name": "pname%", "db_type": "float"},
+          {"gpb_name": "Timestamp", "gpb_type": "long", "db_name": "timestamp", "db_type": "string"},
+          {"gpb_name": "node_id", "gpb_type": "string", "db_name": "swname", "db_type": "string"}
+        ]
+      }
+    },
+    {
+      "encodingpath":"show processes memory",
+      "function" :
+      {
+        "name" : "processGeneric",
+        "index": {
+          "index_prefix" : "lan_mem_stats_",
+          "index_type" : "daily"
+        },
+        "members": [
+          {"gpb_name": "process", "gpb_type": "string", "db_name": "pname", "db_type": "string"},
+          {"gpb_name": "mem_alloc", "gpb_type": "string", "db_name": "mem_alloc", "db_type": "long"},
+          {"gpb_name": "Timestamp", "gpb_type": "string", "db_name": "timestamp", "db_type": "string"},
+          {"gpb_name": "mem_used", "gpb_type": "string", "db_name": "mem_used", "db_type": "long"},
+          {"gpb_name": "mem_limit", "gpb_type": "string", "db_name": "mem_limit", "db_type": "long"},
+	  {"gpb_name": "node_id", "gpb_type": "string", "db_name": "swname", "db_type": "string"}
+       ]
+      }
+    },
+    {
+      "encodingpath":"show environment power",
+      "function" :
+      {
+        "name" : "processGeneric",
+        "index": {
+          "index_prefix" : "lan_power_stats_",
+          "index_type" : "daily"
+        },
+        "members": [
+          {"gpb_name": "psnum", "gpb_type": "string", "db_name": "num", "db_type": "int"},
+	  {"gpb_name": "psmodel", "gpb_type": "string", "db_name": "model", "db_type": "string"},
+	  {"gpb_name": "ps_status", "gpb_type": "string", "db_name": "status", "db_type": "string"},
+	  {"gpb_name": "Timestamp", "gpb_type": "string", "db_name": "timestamp", "db_type": "string"},
+	  {"gpb_name": "actual_input", "gpb_type": "string", "db_name": "input", "db_type": "string"},
+	  {"gpb_name": "actual_out", "gpb_type": "string", "db_name": "ouput", "db_type": "string"},
+	  {"gpb_name": "psnum", "gpb_type": "string", "db_name": "psnum", "db_type": "string"},
+	  {"gpb_name": "node_id", "gpb_type": "string", "db_name": "swname", "db_type": "string"}
+       ]
+      }
+    },
+    {
+      "encodingpath":"show system resources",
+      "function" :
+      {
+        "name" : "processGeneric",
+        "index": {
+          "index_prefix" : "lan_resources_stats_",
+          "index_type" : "daily"
+        },
+        "members": [
+          {"gpb_name": "memory_usage_total", "gpb_type": "string", "db_name": "memorytotal", "db_type": "float"},
+          {"gpb_name": "memory_usage_free", "gpb_type": "string", "db_name": "memoryfree", "db_type": "float"},
+          {"gpb_name": "memory_usage_used", "gpb_type": "string", "db_name": "memoryused", "db_type": "float"},
+          {"gpb_name": "cpu_state_kernel", "gpb_type": "string", "db_name": "cpukernel", "db_type": "float"},
+          {"gpb_name": "cpu_state_user", "gpb_type": "string", "db_name": "cpuuser", "db_type": "float"},
+          {"gpb_name": "cpu_state_idle", "gpb_type": "string", "db_name": "cpuidle", "db_type": "float"},
+          {"gpb_name": "Timestamp", "gpb_type": "string", "db_name": "timestamp", "db_type": "string"},
+          {"gpb_name": "node_id", "gpb_type": "string", "db_name": "swname", "db_type": "string"}
+       ]
+      }
+    },
+    {
+      "encodingpath":"show environment fan detail",
+      "function" :
+      {
+        "name" : "processGeneric",
+        "index": {
+          "index_prefix" : "lan_fan_stats_",
+          "index_type" : "daily"
+        },
+        "members": [
+	  {"gpb_name": "fanname", "gpb_type": "string", "db_name": "name", "db_type": "string"},
+          {"gpb_name": "fanstatus", "gpb_type": "string", "db_name": "status", "db_type": "string"},
+	  {"gpb_name": "Timestamp", "gpb_type": "string", "db_name": "timestamp", "db_type": "string"},
+	  {"gpb_name": "fannum", "gpb_type": "string", "db_name": "num", "db_type": "string"},
+	  {"gpb_name": "fanrpm", "gpb_type": "int", "db_name": "rpm", "db_type": "int"},
+          {"gpb_name": "fanperc", "gpb_type": "int", "db_name": "fan%", "db_type": "float"},
+          {"gpb_name": "fandir", "gpb_type": "string", "db_name": "dir", "db_type": "string"},
+	  {"gpb_name": "node_id", "gpb_type": "string", "db_name": "swname", "db_type": "string"}
+       ]
+      }
+    }
+  ]
+}
