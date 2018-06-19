@@ -1,0 +1,37 @@
+---
+- name: Prepare Bird2
+  hosts: bird2
+  user: vagrant
+  sudo: yes
+  gather_facts: yes
+
+  tasks:
+  - name: Bird Configuration
+    template: src={{inventory_hostname}}.conf dest=/etc/bird/bird.conf
+  - name: Set PATH for crontab
+    cron:
+        name: PATH
+        env: yes
+        value: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+  - name: Set SHELL for crontab
+    cron:
+        name: SHELL
+        env: yes
+        value: /bin/bash
+
+  - name: Configure Flappy Bird
+    cron:
+        name: "Flappy Bird"
+        job: "/home/vagrant/flappy_bird.sh"
+  - name: Start Necessary Services
+    service: name={{ item }} state=started
+    with_items:
+      - bird
+      - elasticsearch
+      - kibana
+      - lldpd
+      - cron
+
+  - name: Start iPerf3 Server
+    shell: iperf3 --server --daemon

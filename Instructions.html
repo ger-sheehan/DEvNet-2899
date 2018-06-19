@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Instructions</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">CL Orlando</h1>
+
+<h2 id="toc_1">Devnet-2899: NX-OS Streaming Telemetry</h2>
+
+<h3 id="toc_2">Getting Started</h3>
+
+<h3 id="toc_3">Topology</h3>
+
+<p>To begin with, we will review the topology.</p>
+
+<p><img src="images/Topology.png" alt="Dashboard"></p>
+
+<p>There are 3 different VMs. 1 N9Kv, which is our virtual N9K, and 2 other Linux VMs, with which the N9Kv will peer. All IP addresses and BGP configuration is already in place. In this situation, our N9K will be streaming data to Bird2, where our receiver, ElasticSearch database as well as Kibana are running.</p>
+
+<p>On bird1, the BGP neighborship will stay up once it is established. We will still see the updates with the current state, being streamed off box every 30 seconds.</p>
+
+<p>On bird2 there is a script flapping the BGP process every minute. We will then see this changed state being updated on our dashboard every 30 seconds.</p>
+
+<p>Please open the terminal app, and open an additional tab.  In both tabs, please enter the following command <code>cd workspace/DevNet-2899</code></p>
+
+<h3 id="toc_4">Receiver</h3>
+
+<p>We will firstly connect to the server to which the data is being sent, to start the receiver as well as give it the desired configuration and parser.</p>
+
+<div><pre><code class="language-none">vagrant ssh bird2</code></pre></div>
+
+<p>We will now become sudo.</p>
+
+<div><pre><code class="language-none">vagrant@bird2:~$ sudo su
+root@bird2:/home/vagrant#</code></pre></div>
+
+<p>Next we will change directory into <code>pipeline_12_08_17</code></p>
+
+<div><pre><code class="language-none">root@bird2:/home/vagrant# ls
+flappy_bird.sh  pipeline_12_08_17
+root@bird2:/home/vagrant# cd pipeline_12_08_17/
+root@bird2:/home/vagrant/pipeline_12_08_17#
+</code></pre></div>
+
+<p>Here there are multiple files, but the 3 most relevant are the nexus-pipeline.bin binary file, the configuration file as well as the parser.</p>
+
+<ol>
+<li><strong>nexus-pipeline.bin</strong> This is the compiled binary of the receiver that we want to run.</li>
+<li><strong>pipeline.conf</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The configuration file defines various stages of the pipeline; the input stage, i.e. what port to listen on, the output stage, i.e. what database to send data to etc.</li>
+<li><strong>parser.json</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The parser defines how to filter the data, rename various attributes or convert the data type, ie string to integer. </li>
+</ol>
+
+<p>This is just a snippet of the configuration file for our receiver. In this instance, the receiver is sending the data to ElasticSearch, which listening is on port 9200 on the same server, ie localhost. This could be sent to any DB on the network once it has network connectivity.</p>
+
+<div><pre><code class="language-none">&lt;snippet&gt;
+
+[gRPCDialout]
+#
+stage = xport_input
+#
+# grpc: in the role of server with router connecting to pipeline and
+# client side streaming.
+#
+type = grpc
+#
+# Encapsulation pushed by client: gpb, gpbkv, gpbcompact.
+# As of 6.1.1 release, we support gpb (which is a common
+# header used to carry compact and k/v gpb), and we default
+# to gpb.
+encap = gpb
+#
+# Socket to listen on
+#
+listen = :50001
+#
+&lt;snippet&gt;
+.
+.
+.
+&lt;snippet&gt;
+
+#Config options for elastic is currently
+#
+# elastic server
+#############################elastic = http://elastic.example.com:8086
+elastic = http://localhost:9200/
+#
+# Database to populate, currently static (might be templatised in the future).
+# Expectation is that database exists and user has read/write access.
+# database = dbname
+#database = telemetry
+#
+&lt;snippet&gt;
+</code></pre></div>
+
+<p>Next we will look at the parser file. The parser file can be used to rename the attributes, transform data from one type to another. 
+Here is a snippet for the command <code>show system resources</code>. In a furter section, you will see how this is tied to the telemetry configuration the switch.
+In this situation, the encoding path is the source as specified in the GPB payload.
+The index we are going to use is <code>lan_resources_stats_</code> and we will create a new index in ElasticSearch daily. This is a method of optimizing data retrieval. 
+The index_type can be adjusted as required, to be weekly, hourly or whatever fits your requirements.
+Here we are transforming data from the gpb_name, and gpb_type that are being received into a format that best suits our needs. As an example here, memory_usage_total is renamed memorytotal, and the type is transformed from a string to a float, so we could potentially performed calculations with it.</p>
+
+<div><pre><code class="language-none">{
+      &quot;encodingpath&quot;:&quot;show system resources&quot;,
+      &quot;function&quot; :
+      {
+        &quot;name&quot; : &quot;processGeneric&quot;,
+        &quot;index&quot;: {
+          &quot;index_prefix&quot; : &quot;lan_resources_stats_&quot;,
+          &quot;index_type&quot; : &quot;daily&quot;
+        },
+        &quot;members&quot;: [
+          {&quot;gpb_name&quot;: &quot;memory_usage_total&quot;, &quot;gpb_type&quot;: &quot;string&quot;, &quot;db_name&quot;: &quot;memorytotal&quot;, &quot;db_type&quot;: &quot;float&quot;},
+          {&quot;gpb_name&quot;: &quot;memory_usage_free&quot;, &quot;gpb_type&quot;: &quot;string&quot;, &quot;db_name&quot;: &quot;memoryfree&quot;, &quot;db_type&quot;: &quot;float&quot;},
+          {&quot;gpb_name&quot;: &quot;memory_usage_used&quot;, &quot;gpb_type&quot;: &quot;string&quot;, &quot;db_name&quot;: &quot;memoryused&quot;, &quot;db_type&quot;: &quot;float&quot;},
+          {&quot;gpb_name&quot;: &quot;cpu_state_kernel&quot;, &quot;gpb_type&quot;: &quot;string&quot;, &quot;db_name&quot;: &quot;cpukernel&quot;, &quot;db_type&quot;: &quot;float&quot;},
+          {&quot;gpb_name&quot;: &quot;cpu_state_user&quot;, &quot;gpb_type&quot;: &quot;string&quot;, &quot;db_name&quot;: &quot;cpuuser&quot;, &quot;db_type&quot;: &quot;float&quot;},
+          {&quot;gpb_name&quot;: &quot;cpu_state_idle&quot;, &quot;gpb_type&quot;: &quot;string&quot;, &quot;db_name&quot;: &quot;cpuidle&quot;, &quot;db_type&quot;: &quot;float&quot;},
+          {&quot;gpb_name&quot;: &quot;Timestamp&quot;, &quot;gpb_type&quot;: &quot;string&quot;, &quot;db_name&quot;: &quot;timestamp&quot;, &quot;db_type&quot;: &quot;string&quot;},
+          {&quot;gpb_name&quot;: &quot;node_id&quot;, &quot;gpb_type&quot;: &quot;string&quot;, &quot;db_name&quot;: &quot;swname&quot;, &quot;db_type&quot;: &quot;string&quot;}
+       ]
+      }
+    }</code></pre></div>
+
+<p>Given that we have now reviewed the configuration file as well as the parser for our receiver, we will now start the UTR.</p>
+
+<div><pre><code class="language-none">./nexus-pipeline.bin --config pipeline.conf --parser parser.json &amp;</code></pre></div>
+
+<h3 id="toc_5">Configuring Telemetry on N9Kv</h3>
+
+<p>Now we will connect to our N9Kv.
+In the second terminal tab, we use vagrant ssh to connect to n9kv1.</p>
+
+<div><pre><code class="language-none">$ vagrant ssh n9kv1
+Password:</code></pre></div>
+
+<p>The password is <code>vagrant</code></p>
+
+<p>Next we want to check that the switch is in the desired state, from an operational standpoint. </p>
+
+<p>Firstly we want to check the LLDP neighbor state.</p>
+
+<div><pre><code class="language-none">Nexus9000v# show lldp neighbors
+Capability codes:
+  (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device
+  (W) WLAN Access Point, (P) Repeater, (S) Station, (O) Other
+Device ID            Local Intf      Hold-time  Capability  Port ID
+bird1                Eth1/1          120        S           0800.2752.028f
+bird2                Eth1/2          120        S           0800.2758.bc48
+bird2                Eth1/3          120        S           0800.27e1.36a9
+Total entries displayed: 3
+Nexus9000v#
+</code></pre></div>
+
+<p>If you do not see 2 LLDP neighbors over 3 links, Eth1/1-3, please let Shashi know. 
+We will soon incorporate this into our telemetry solution. </p>
+
+<p>Next, we want to check the BGP state.</p>
+
+<div><pre><code class="language-none">Nexus9000v# show bgp sessions
+Total peers 2, established peers 2
+ASN 65003
+VRF default, local ASN 65003
+peers 2, established peers 2, local router-id 30.30.30.12
+State: I-Idle, A-Active, O-Open, E-Established, C-Closing, S-Shutdown
+
+Neighbor        ASN    Flaps LastUpDn|LastRead|LastWrit St Port(L/R)  Notif(S/R)
+10.10.10.11     65001 0     00:06:16|00:00:05|00:00:42 E   17489/179        0/0
+20.20.20.11     65002 3     00:00:42|00:00:42|00:00:41 E   179/44278      0/3
+Nexus9000v#
+</code></pre></div>
+
+<p>As we can now see, the BGP neighbors have come up. If BGP neighbor 20.20.20.11 is in a state other than &#39;Established&#39; but the &#39;Flaps&#39; count is greater than 0, that is ok too. As mentioned previously, there is a script changing the state of BGP on bird2 every minute.</p>
+
+<p>These are relevant items that we want to monitor, on an ongoing basis. This is where we will now use NX-OS telemetry. </p>
+
+<h3 id="toc_6">Configuring Telemetry</h3>
+
+<p>Firstly we enter enable the feature to start the telemetry process. <code>feature telemetry</code> </p>
+
+<div><pre><code class="language-none">Nexus9000v(config)# feature telemetry</code></pre></div>
+
+<p>This starts the process, but it doesn&#39;t yet know what data to collect or where to send the telemetry data. </p>
+
+<div><pre><code class="language-none">Nexus9000v# sh telemetry transport
+
+Session Id      IP Address      Port       Encoding   Transport  Status
+--------------------------------------------------------------------------------
+Nexus9000v#
+</code></pre></div>
+
+<p>On the NX-OS SW streaming telemetry solution, there are 2 datasources available. We have a default data source of DME, and a second data source called NX-API. </p>
+
+<p>Here today we will pull data from both sources. We will get BGP state from DME, and system resources and LLDP data from  NX-API.</p>
+
+<p>Firstly we will configure where NX-OS should send the data, by default it is sent in the management VRF, but it can be configured to operate in any VRF available.</p>
+
+<p>In this workshop we will send the data in the default VRF, to an IP of 30.30.30.11. The receiver will be listening on this IP on port 50001. The encoding will be GPB and the protocol will be gRPC.</p>
+
+<div><pre><code class="language-none">telemetry
+  destination-profile
+    use-vrf default
+  destination-group 1
+    ip address 30.30.30.11 port 50001 protocol gRPC encoding GPB</code></pre></div>
+
+<p>How that this is configured the destination and encodin/transport, we will next add what data to send. As previously highlighted, there are 2 data sources, the default DME and NX-API. 
+The concept of a sensor group can be considered a grouping of common data points that you would want in a similar timeframe. eg you may want interfacce statistics every 20-30 seconds, but powersupply and fan info every 2-3 minutes.</p>
+
+<p>At this stage we will gather <code>system resources</code> from the data-source of NXAPI</p>
+
+<div><pre><code class="language-none">  sensor-group 1
+    data-source NX-API
+    path &quot;show system resources&quot; depth 0</code></pre></div>
+
+<p>In the next section we are going to gather BGP state from DME. Here we are defining 4 different DNs, to gather BGP data.</p>
+
+<p>We are working on a solution to simplify this configuration, for the most common elements that people are looking to gather. eg Environmental data, Interface statistics, BGP state information etc</p>
+
+<div><pre><code class="language-none">  sensor-group 2
+    path sys/bgp depth 0
+    path sys/bgp/inst depth 0
+    path sys/bgp/inst/dom-default/peer-[10.10.10.11]/ent-[10.10.10.11] depth 0
+    path sys/bgp/inst/dom-default/peer-[20.20.20.11]/ent-[20.20.20.11] depth 0</code></pre></div>
+
+<p>The next step is to pair a sensor-group with a destination group. In this situation we are sending both sensor-groups to the same destination, but this can be configured to to separate destination groups and cadences if required.</p>
+
+<div><pre><code class="language-none">  subscription 1
+    dst-grp 1
+    snsr-grp 1 sample-interval 30000
+    snsr-grp 2 sample-interval 30000</code></pre></div>
+
+<p>Now that the telemetry receiver has been started and our N9Kv is sending data, we will confirm that the connection has been established.</p>
+
+<pre>
+Nexus9000v# sh telemetry transport
+
+Session Id      IP Address      Port       Encoding   Transport  Status
+--------------------------------------------------------------------------------
+0               30.30.30.11     50001      GPB        gRPC       <b>Connected</b>
+Nexus9000v#
+
+</pre>
+
+<h3 id="toc_7">Visulalization</h3>
+
+<p>Now please go to the following link, where we will now see the visualizations.  <a href="http://localhost:5601/">http://localhost:5601/</a></p>
+
+<p><img src="images/Dashboard.png" alt="Dashboard"></p>
+
+<h3 id="toc_8">Filtering &amp; Transforming Data</h3>
+
+<p>We have now seen the various step required, but we now want to gather additional operational state.
+We will add LLDP information to our telemetry dashboard and show how that can be filtered and transformed as part of telemetry.</p>
+
+<p>Now let us add some additional data to be sent as part of Nexus telemetry.</p>
+
+<p>We will now add LLDP neighbor information to the configuration as part the existing sensor-group 1. </p>
+
+<div><pre><code class="language-none">  sensor-group 1
+     path &quot;show lldp neighbors detail&quot; depth 0</code></pre></div>
+
+<p>We will next ensure that it has been added correctly to our configuration.</p>
+
+<div><pre><code class="language-none">Nexus9000v# sh run telemetry | sec &#39;sensor-group 1&#39;
+   sensor-group 1
+    data-source NX-API
+    path &quot;show lldp neighbors detail&quot; depth 0
+    path &quot;show system resources&quot; depth 0
+Nexus9000v#</code></pre></div>
+
+<p><code>show lldp neighbor detail</code> has quite a bit of information. We will now see how we can filter and transform the data, as well as create an index specific for this new data.  This is a more efficent use of our DB.</p>
+
+<h4 id="toc_9">Transforming data</h4>
+
+<p>A second parser file called lldp_parser.json, that has already been designed to transform and filter the data.</p>
+
+<div><pre><code class="language-none">
+root@bird2:/home/vagrant/pipeline_12_08_17# ls | grep parser
+lldp_parser.json
+parser.json</code></pre></div>
+
+<p>We will now do a diff between the 2 parser, so we can highlght what has been added to the 2nd parser.</p>
+
+<div><pre><code class="language-none">
+root@bird2:/home/vagrant/pipeline_12_08_17# diff -c parser.json lldp_parser.json
+*** parser.json 2018-01-26 00:31:24.894583458 +0000
+--- lldp_parser.json    2018-01-26 00:29:46.344925270 +0000
+***************
+*** 29,34 ****
+--- 29,53 ----
+        }
+      },
+      {
++       &quot;encodingpath&quot;:&quot;show lldp neighbors detail&quot;,
++       &quot;function&quot; :
++       {
++         &quot;name&quot; : &quot;processGeneric&quot;,
++         &quot;index&quot;: {
++           &quot;index_prefix&quot; : &quot;lan_lldp_neighbors_detail_&quot;,
++           &quot;index_type&quot; : &quot;daily&quot;
++         },
++         &quot;members&quot;: [
++           {&quot;gpb_name&quot;: &quot;port_desc&quot;, &quot;gpb_type&quot;: &quot;string&quot;, &quot;db_name&quot;: &quot;neighbor_port&quot;, &quot;db_type&quot;: &quot;string&quot;},
++           {&quot;gpb_name&quot;: &quot;l_port_id&quot;, &quot;gpb_type&quot;: &quot;string&quot;, &quot;db_name&quot;: &quot;local_port&quot;, &quot;db_type&quot;: &quot;string&quot;},
++           {&quot;gpb_name&quot;: &quot;sys_name&quot;, &quot;gpb_type&quot;: &quot;string&quot;, &quot;db_name&quot;: &quot;neighbor_name&quot;, &quot;db_type&quot;: &quot;string&quot;},
++           {&quot;gpb_name&quot;: &quot;enabled_capability&quot;, &quot;gpb_type&quot;: &quot;string&quot;, &quot;db_name&quot;: &quot;enabled_capability&quot;, &quot;db_type&quot;: &quot;string&quot;},
++           {&quot;gpb_name&quot;: &quot;Timestamp&quot;, &quot;gpb_type&quot;: &quot;long&quot;, &quot;db_name&quot;: &quot;timestamp&quot;, &quot;db_type&quot;: &quot;string&quot;},
++           {&quot;gpb_name&quot;: &quot;node_id&quot;, &quot;gpb_type&quot;: &quot;string&quot;, &quot;db_name&quot;: &quot;swname&quot;, &quot;db_type&quot;: &quot;string&quot;}
++         ]
++       }
++     },
++     {
+        &quot;encodingpath&quot;:&quot;show processes memory&quot;,
+        &quot;function&quot; :
+        {
+root@bird2:/home/vagrant/pipeline_12_08_17#</code></pre></div>
+
+<p>We will now stop the existing receiver and restart it with the new parser file.</p>
+
+<p>To stop this process we need to first find what the process ID is by entering <code>ps -a</code></p>
+
+<div><pre><code class="language-none">root@bird2:/home/vagrant/pipeline_12_08_17# ps -a
+  PID TTY          TIME CMD
+ 3220 pts/0    00:00:00 sudo
+ 3221 pts/0    00:00:00 su
+ 3222 pts/0    00:00:00 bash
+ xxxx pts/0    00:00:00 nexus-pipeline.
+ 3634 pts/0    00:00:00 ps
+root@bird2:/home/vagrant/pipeline_12_08_17#
+</code></pre></div>
+
+<p>Once we have found the specific process ID that is associated with our nexus-pipeline we will kill thta process. <code>kill -9 xxxx</code></p>
+
+<div><pre><code class="language-none">root@bird2:/home/vagrant/pipeline_12_08_17# kill -9 3568
+root@bird2:/home/vagrant/pipeline_12_08_17#
+[1]+  Killed                  ./nexus-pipeline.bin --config pipeline.conf --parser parser.json
+root@bird2:/home/vagrant/pipeline_12_08_17#</code></pre></div>
+
+<p>We will now restart the process with the new lldp_parser.json file.</p>
+
+<div><pre><code class="language-none">./nexus-pipeline.bin --config pipeline.conf --parser lldp_parser.json &amp;</code></pre></div>
+
+<p>Once we have restarted the recevier, we will then navigate to our browser, to see how this new data has been incorporated into our database as well as onto our dashboard.</p>
+
+<h3 id="toc_10">Generating Real Time Data</h3>
+
+<h4 id="toc_11">Increase CPU utilization</h4>
+
+<p>To now highlight the speed with which telemetry data can be displayed on a dashboard, we will now, create an event that spikes the CPU utilization.</p>
+
+<p>In terminal, please go to the tab on for N9Kv1, and enter the following commands.</p>
+
+<p>Please enter the bash sheel on out n9kv1.</p>
+
+<div><pre><code class="language-none">Nexus9000v# run bash</code></pre></div>
+
+<p>Please become sudo user here also.</p>
+
+<div><pre><code class="language-none">bash-4.2$ sudo su
+</code></pre></div>
+
+<p>We will now create a spike in CPU utilization. </p>
+
+<div><pre><code class="language-none">bash-4.2# dd if=/dev/zero of=/dev/null</code></pre></div>
+
+<p>Once this has been entered, please then navigate back to the browser, to see this data being visualized in near real time on the dashboard.</p>
+
+
+
+
+</body>
+
+</html>

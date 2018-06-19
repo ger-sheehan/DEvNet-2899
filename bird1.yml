@@ -1,0 +1,22 @@
+---
+- name: Prepare Bird1
+  hosts: bird1
+  user: vagrant
+  sudo: yes
+  gather_facts: yes
+
+  tasks:
+  - name: Bird Configuration
+    template: src={{inventory_hostname}}.conf dest=/etc/bird/bird.conf
+  - name: Start Bird
+    service: name={{ item }} state=started
+    with_items:
+      - bird
+      - lldpd
+
+  - name: Stop ES/Kibana
+    service: name={{ item }} state=stopped
+    with_items:
+      - elasticsearch
+      - kibana
+      - cron
